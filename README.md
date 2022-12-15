@@ -1,2 +1,2 @@
-# my-homepaga-practice
+# my-homepage-practice
 お試しです
