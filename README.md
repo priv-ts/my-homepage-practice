@@ -1,2 +1,2 @@
 # my-homepaga-practice
-お試しです
+お試しですよ
