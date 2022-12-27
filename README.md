@@ -1,2 +1,2 @@
-# my-homepage-practice
+# my-layout-practice
 お試しです
