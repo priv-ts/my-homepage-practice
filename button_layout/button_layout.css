@@ -9,6 +9,6 @@
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-.button:disabled {
+#disabled-button:disabled {
   background-color: #999;
 }
