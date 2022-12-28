@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.todo {
+  margin-top: 20px;
+  /* 子要素のwidthを指定しないと要素が表示されない（実装後は.buttonにheightがあるので表示されるけどね） */
+  min-width: 800px;
+  min-height: 30vh;
+  background-color: #eee;
+}
+
+.button-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  box-sizing: border-box;
+  width: 200px;
+  height: 3em;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #2e7c9f;
+  color: white;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.todo-list-area {
+  margin-top: 20px;
+}
+
+.todo-list-area > h3 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 24px;
+  padding: 10px;
+}
+
+#todo-list {
+  margin-left: 10px;
+}
+
+#todo-list > li {
+  margin-top: 10px;
+}
