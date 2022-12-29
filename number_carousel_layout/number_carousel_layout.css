@@ -11,6 +11,7 @@ body {
   /* ここのoverflow: hiddenはよくわからん */
   /* overflow: hidden; */
 }
+
 body {
   display: flex;
   /* 要素を縦並びに配置する */
@@ -45,8 +46,8 @@ body {
   height: 10px;
 }
 .slides::-webkit-scrollbar-thumb {
-  background: slategray;
-  border-radius: 10px;
+  border-radius: 20px;
+  background: #666;
 }
 
 /* slide(card)のレイアウト */
