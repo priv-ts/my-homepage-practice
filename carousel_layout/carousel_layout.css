@@ -1,0 +1,96 @@
+/* Don't need button navigation */
+@supports (scroll-snap-type) {
+  .slider > a {
+    display: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  /* ここのoverflow: hiddenはよくわからん */
+  /* overflow: hidden; */
+}
+body {
+  display: flex;
+  /* 要素を縦並びに配置する */
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #74abe2, #5563de);
+}
+
+.number-carousel-layout {
+  /* .slides > divのwidthと揃える */
+  width: 300px;
+  /* <a>を左右中央揃えにする */
+  text-align: center;
+  /* ここのoverflow: hiddenはよくわからん */
+  /* overflow: hidden; */
+  margin-top: 40px;
+}
+
+.slides {
+  display: flex;
+  /*画面に1スライドのみを表示する */
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* scrollbarのレイアウト */
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: slategray;
+  border-radius: 10px;
+}
+
+/* slide(card)のレイアウト */
+.slides > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* 1領域1スライドのみを表示する */
+  flex-shrink: 0;
+
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 20px;
+  background: #eee;
+
+  font-size: 100px;
+
+  /* transformについてはよくわかってない */
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+/* slideのページャーレイアウト */
+.number-carousel-layout > a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0 0.5rem 0;
+  border-radius: 50%;
+  background: white;
+  /* リンクの下線を消す */
+  text-decoration: none;
+  /* positionについてはよくわかってない */
+  position: relative;
+}
+.number-carousel-layout > a:active {
+  top: 1px;
+}
+.number-carousel-layout > a:focus {
+  background: #000;
+  color: cornflowerblue;
+}
